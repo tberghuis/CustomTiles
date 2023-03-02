@@ -1,0 +1,25 @@
+
+text only
+single tile
+
+not really motivated for this.
+
+i could make a web app to generate apk.
+that way i could have multiple tiles
+
+whats the business model... marketing me as an android dev
+
+
+vertical pager in an app
+...
+in a glancable
+
+companion app
+
+
+ok so scrap using a pager
+cycle through array ontap
+
+object FakeViewModel to start
+
+glance is not cut out to operate as a normal app

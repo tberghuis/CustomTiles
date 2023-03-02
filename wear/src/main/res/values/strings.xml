@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Custom Tile</string>
+
+    <string name="tile_service_desc">Custom Tile</string>
+    <string name="tile_label">Custom Tile</string>
+
+</resources>

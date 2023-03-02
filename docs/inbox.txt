@@ -1,0 +1,127 @@
+tiles codelab
+
+pre mvp
+  single tile with toilet code
+  tile bike lock code
+
+  add images and barcodes, so i will have to rename this
+  
+  glance codelab
+
+
+wearos recorder reference
+https://github.com/google/horologist
+
+
+dynamic content in a vertical pager
+ok that is a solution.
+
+https://github.com/google/horologist/blob/main/compose-layout/src/main/java/com/google/android/horologist/compose/pager/PagerScreen.kt
+
+
+
+VerticalPager is not compatible with glance
+
+
+###########################
+ChannelClient to transfer image
+MessageClient to transfer text
+
+DataClient 
+DataItem - text - use this for syncing???
+Asset - image
+
+doitwrong
+
+read docs "handling data"
+read source code sample DataLayer
+
+WearableListenerService listen for update text tile event, write to datastore
+tile read from datastore, if null "please use phone app to set tile text"
+
+https://developer.android.com/training/wearables/data/messages
+
+use DataClient....
+
+https://stackoverflow.com/search?tab=newest&q=%5bwear-os%5d%20answers%3a1..&searchOn=3
+
+next task, insert into data store.
+...
+doitwrong
+release mvp
+
+do i even need wear xml? probably only for capability???
+
+datastore codelab
+glance update from datastore flow
+
+
+next task learn GlanceTileService
+
+
+wait until androidx.glance:glance-wear-tiles:1.0.0-alpha05 is out of alpha
+ask on stackoverflow how to refresh tile?
+
+put message in phone app, 
+ to update tile, tap to refresh
+
+ next task, multi line textfield
+
+deal with verion, wear and phone modules gradle, play console 
+
+custom glancestatedefinition take datastore as dependency instead of repository
+
+refactor
+
+remove activity wearos
+multiline text
+
+
+mobile app, save tile text to datastore preferences
+setup hilt
+setup vm
+setup datastore
+
+
+fresh github repo before release
+
+common module for shared code like TileTextRepository
+do it later
+
+
+snackbar when send to watch success
+
+app title bar, app name
+
+come up with proper app_name
+
+icon for phone and wear apps, use the same
+  tile icon??? with watch symbol
+
+
+test cases, wear app not installed
+  no paired watch
+  show a snackbar error message
+  future problem
+
+ icon + description for tile entry 
+
+
+ multi module, check diff
+ https://github.com/stevdza-san/DiaryApp/tree/multi_module
+ meh
+
+ clean code
+
+
+ next task 1st release
+
+ github fresh repo
+ privacy policy
+ upload play console
+ cull inbox
+ clean code
+ cull noteboat
+ github readme
+ testing
+ reddit post

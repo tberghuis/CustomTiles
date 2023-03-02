@@ -1,0 +1,1 @@
+adb -s ticwatch uninstall dev.tberghuis.customtiles
