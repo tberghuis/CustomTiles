@@ -119,6 +119,8 @@ test cases, wear app not installed
  
  
  upload play console
+ screenshots
+ questionairs
  cull inbox
  clean code
  cull noteboat
