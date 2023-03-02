@@ -127,3 +127,6 @@ test cases, wear app not installed
  github readme
  testing
  reddit post
+
+
+ investigate pre launch report errors
