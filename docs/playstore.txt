@@ -7,3 +7,4 @@ Full description
 This app allows you to set a custom message on your WearOS smartwatch.
 The message will be shown as a Tile.
 
+Source code: https://github.com/tberghuis/CustomTiles
