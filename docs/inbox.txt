@@ -116,7 +116,7 @@ test cases, wear app not installed
 
  next task 1st release
 
- github fresh repo
+ 
  privacy policy
  upload play console
  cull inbox
