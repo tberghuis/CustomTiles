@@ -117,7 +117,7 @@ test cases, wear app not installed
  next task 1st release
 
  
- privacy policy
+ 
  upload play console
  cull inbox
  clean code
