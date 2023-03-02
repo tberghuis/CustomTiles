@@ -1,0 +1,9 @@
+Short description
+
+Add a custom message / text to your WearOS smartwatch as a Tile.
+
+Full description
+
+This app allows you to set a custom message on your WearOS smartwatch.
+The message will be shown as a Tile.
+
