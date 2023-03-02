@@ -130,3 +130,6 @@ test cases, wear app not installed
 
 
  investigate pre launch report errors
+
+ add a try catch if wearos app is not installed
+ 

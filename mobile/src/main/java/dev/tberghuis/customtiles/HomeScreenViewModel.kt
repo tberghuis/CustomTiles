@@ -10,6 +10,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import dev.tberghuis.customtiles.data.TileTextRepository
 import dev.tberghuis.customtiles.util.logd
 import javax.inject.Inject
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
@@ -38,8 +39,14 @@ class HomeScreenViewModel
       dataMap.putString("tile_text", tileText.value)
     }.asPutDataRequest().setUrgent()
     viewModelScope.launch {
-      val result = dataClient.putDataItem(request).await()
-      logd("result $result")
+      try {
+        val result = dataClient.putDataItem(request).await()
+        logd("result $result")
+      } catch (cancellationException: CancellationException) {
+        throw cancellationException
+      } catch (exception: Exception) {
+        logd("Saving DataItem failed: $exception")
+      }
     }
     viewModelScope.launch {
       tileTextRepository.updateTileText(tileText.value)
