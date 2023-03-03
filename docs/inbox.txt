@@ -133,3 +133,11 @@ test cases, wear app not installed
 
  add a try catch if wearos app is not installed
  
+ drop the 's' app_name "Custom Tile"
+
+ snackbar showing success or error
+
+ refilm demo vertical using dads phone
+
+ https://play.google.com/store/apps/details?id=dev.tberghuis.customtiles
+ 
