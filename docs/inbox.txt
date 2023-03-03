@@ -21,7 +21,3 @@ testing.txt, wear app not installed
  drop the 's' app_name "Custom Tile"
 
  refilm demo vertical using dads phone
-
- https://play.google.com/store/apps/details?id=dev.tberghuis.customtiles
-
- Custom Tile - open source app to show custom text on a Tile
