@@ -16,3 +16,5 @@ local.properties
 
 /mobile/release/
 /wear/release/
+
+/.idea/deploymentTargetDropDown.xml
