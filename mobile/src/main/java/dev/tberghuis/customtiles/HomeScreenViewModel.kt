@@ -1,6 +1,7 @@
 package dev.tberghuis.customtiles
 
 import android.content.Context
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -23,6 +24,8 @@ class HomeScreenViewModel
   val tileText = mutableStateOf<String>("")
   val initialised = mutableStateOf(false)
 
+  val snackbarHostState = SnackbarHostState()
+
   init {
 
     viewModelScope.launch {
@@ -42,10 +45,12 @@ class HomeScreenViewModel
       try {
         val result = dataClient.putDataItem(request).await()
         logd("result $result")
+        snackbarHostState.showSnackbar("Tile updated")
       } catch (cancellationException: CancellationException) {
         throw cancellationException
       } catch (exception: Exception) {
         logd("Saving DataItem failed: $exception")
+        snackbarHostState.showSnackbar("$exception")
       }
     }
     viewModelScope.launch {
