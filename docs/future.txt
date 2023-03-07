@@ -1,1 +1,4 @@
 support image tiles
+
+unpublished fork for tasker integration
+https://tasker.joaoapps.com/pluginslibrary.html
