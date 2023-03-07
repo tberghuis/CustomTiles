@@ -8,12 +8,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -47,7 +48,8 @@ fun HomeScreenContent(paddingValues: PaddingValues) {
   Column(
     modifier = Modifier
       .padding(paddingValues)
-      .fillMaxSize(),
+      .fillMaxSize()
+      .verticalScroll(rememberScrollState()),
     verticalArrangement = Arrangement.Top,
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
@@ -66,8 +68,6 @@ fun HomeScreenContent(paddingValues: PaddingValues) {
 
       label = { Text("Tile Text") },
     )
-
-
     Button(
       onClick = {
         logd("Set Tile Text")
@@ -77,9 +77,7 @@ fun HomeScreenContent(paddingValues: PaddingValues) {
       Text("Set Tile Text")
     }
     Spacer(modifier = Modifier.height(30.dp))
-
     Text("note: Tap Tile to refresh text")
+    Spacer(modifier = Modifier.height(20.dp))
   }
-
 }
-
