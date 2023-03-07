@@ -1,5 +1,6 @@
 package dev.tberghuis.customtiles
 
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -24,7 +25,9 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import dev.tberghuis.customtiles.util.logd
@@ -42,9 +45,8 @@ fun HomeScreen() {
     }, snackbarHost = {
       SnackbarHost(vm.snackbarHostState) { data ->
         Snackbar(
-          modifier = Modifier
-            .padding(10.dp),
-          ) {
+          modifier = Modifier.padding(10.dp),
+        ) {
           Text(data.visuals.message)
         }
       }
@@ -63,11 +65,20 @@ fun HomeScreenContent(paddingValues: PaddingValues) {
     return
   }
 
+
+  val focusManager = LocalFocusManager.current
+
+
   Column(
     modifier = Modifier
       .padding(paddingValues)
       .fillMaxSize()
-      .verticalScroll(rememberScrollState()),
+      .verticalScroll(rememberScrollState())
+      .pointerInput(Unit) {
+        detectTapGestures(onTap = {
+          focusManager.clearFocus()
+        })
+      },
     verticalArrangement = Arrangement.Top,
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
@@ -89,6 +100,9 @@ fun HomeScreenContent(paddingValues: PaddingValues) {
     Button(
       onClick = {
         logd("Set Tile Text")
+
+        focusManager.clearFocus()
+
         vm.updateTileText(context)
       },
     ) {
