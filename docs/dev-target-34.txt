@@ -4,10 +4,8 @@ update versions
 compile target 34
 
 get it running
-rip out hilt
-  wear gradle
-  mobile gradle
-  project gradle
+
+kts wear mobile gradle
 
 clean code
 cull tmp todo xxx
