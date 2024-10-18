@@ -5,38 +5,27 @@ import com.google.android.gms.wearable.DataEventBuffer
 import com.google.android.gms.wearable.DataMapItem
 import com.google.android.gms.wearable.MessageEvent
 import com.google.android.gms.wearable.WearableListenerService
-import dagger.hilt.android.AndroidEntryPoint
 import dev.tberghuis.customtiles.data.TileTextRepository
 import dev.tberghuis.customtiles.util.logd
-import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 
-
-@AndroidEntryPoint
 class DataLayerListenerService :
   WearableListenerService() {
+  lateinit private var tileTextRepository: TileTextRepository
 
-  @Inject
-  lateinit var tileTextRepository: TileTextRepository
-
-
-//  lateinit private var tileTextRepository: TileTextRepository
-//
-//  override fun onCreate() {
-//    super.onCreate()
-//    tileTextRepository = TileTextRepository(this)
-//  }
-
+  override fun onCreate() {
+    super.onCreate()
+    tileTextRepository = provideTileTextRepository()
+  }
 
   private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
 
   init {
     logd("DataLayerListenerService init")
   }
-
 
   @SuppressLint("VisibleForTests")
   override fun onDataChanged(dataEvents: DataEventBuffer) {
@@ -70,5 +59,4 @@ class DataLayerListenerService :
     super.onMessageReceived(messageEvent)
     logd("onMessageReceived")
   }
-
 }

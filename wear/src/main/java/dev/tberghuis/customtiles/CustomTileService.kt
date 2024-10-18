@@ -19,17 +19,10 @@ import androidx.glance.text.Text
 import androidx.glance.wear.tiles.GlanceTileService
 import androidx.glance.wear.tiles.action.ActionCallback
 import androidx.glance.wear.tiles.action.actionRunCallback
-import dagger.hilt.android.AndroidEntryPoint
 import dev.tberghuis.customtiles.util.logd
 import java.io.File
-import javax.inject.Inject
 
-@AndroidEntryPoint(GlanceTileService::class)
-class CustomTileService : Hilt_CustomTileService() {
-
-  @Inject
-  lateinit var dataStore: DataStore<Preferences>
-
+class CustomTileService : GlanceTileService() {
   override val stateDefinition = CustomTilesPreferencesGlanceStateDefinition(lazy { dataStore })
 
   private val tileTextKey = stringPreferencesKey("tile_text")
