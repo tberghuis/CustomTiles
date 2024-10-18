@@ -8,3 +8,7 @@ rip out hilt
   wear gradle
   mobile gradle
   project gradle
+
+clean code
+cull tmp todo xxx
+release
