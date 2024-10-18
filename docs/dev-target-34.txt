@@ -5,7 +5,11 @@ compile target 34
 
 get it running
 
-kts wear mobile gradle
+kts gradle 
+  wear 
+  mobile
+
+replace kapt with ksp...  
 
 clean code
 cull tmp todo xxx
