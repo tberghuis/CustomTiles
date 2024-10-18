@@ -2,7 +2,7 @@ plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.kotlin.android)
 //    id 'kotlin-kapt'
-  id("kotlin-kapt")
+//  id("kotlin-kapt")
 }
 
 android {
@@ -82,6 +82,6 @@ dependencies {
   implementation("com.google.guava:guava:31.0.1-android")
 }
 
-kapt {
-  correctErrorTypes = true
-}
+//kapt {
+//  correctErrorTypes = true
+//}
