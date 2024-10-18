@@ -1,7 +1,27 @@
 package dev.tberghuis.customtiles
 
 import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
+import android.content.Context
+import androidx.datastore.preferences.preferencesDataStore
+import dev.tberghuis.customtiles.data.TileTextRepository
 
-@HiltAndroidApp
-class CustomTilesMobileApplication : Application()
+val Context.dataStore by preferencesDataStore(
+  name = "user_preferences",
+)
+
+class CustomTilesMobileApplication : Application() {
+  lateinit var tileTextRepository: TileTextRepository
+
+  override fun onCreate() {
+    super.onCreate()
+    createTileTextRepository()
+  }
+
+  private fun createTileTextRepository() {
+    tileTextRepository = TileTextRepository(dataStore)
+  }
+}
+
+fun Context.provideTileTextRepository(): TileTextRepository {
+  return (applicationContext as CustomTilesMobileApplication).tileTextRepository
+}

@@ -29,14 +29,15 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import dev.tberghuis.customtiles.util.logd
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen() {
-  val vm = hiltViewModel<HomeScreenViewModel>()
+fun HomeScreen(
+  vm: HomeScreenViewModel = viewModel()
+) {
 
   Scaffold(
     // todo use R.app_name
@@ -57,8 +58,9 @@ fun HomeScreen() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreenContent(paddingValues: PaddingValues) {
-  val vm = hiltViewModel<HomeScreenViewModel>()
+fun HomeScreenContent(
+  paddingValues: PaddingValues, vm: HomeScreenViewModel = viewModel()
+) {
   val context = LocalContext.current
   if (!vm.initialised.value) {
     // todo loading
