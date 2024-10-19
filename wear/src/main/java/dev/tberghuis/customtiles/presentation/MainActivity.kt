@@ -61,9 +61,3 @@ fun Greeting(greetingName: String) {
     text = "hello world"
   )
 }
-
-@Preview(device = Devices.WEAR_OS_SMALL_ROUND, showSystemUi = true)
-@Composable
-fun DefaultPreview() {
-  WearApp("Preview Android")
-}
