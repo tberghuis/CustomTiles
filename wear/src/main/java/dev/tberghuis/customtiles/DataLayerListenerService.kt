@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 
 class DataLayerListenerService :
   WearableListenerService() {
-  lateinit private var tileTextRepository: TileTextRepository
+  private lateinit var tileTextRepository: TileTextRepository
 
   override fun onCreate() {
     super.onCreate()
