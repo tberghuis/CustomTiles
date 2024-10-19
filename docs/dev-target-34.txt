@@ -1,8 +1,4 @@
 
-compile target 34
-
-get it running
-
 clean code
 cull tmp todo xxx
 release
