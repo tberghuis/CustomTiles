@@ -1,6 +1,7 @@
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.kotlin.android)
+  alias(libs.plugins.compose)
 }
 
 android {
@@ -47,25 +48,33 @@ android {
 
 dependencies {
 
-  val compose_version = "1.3.3"
+//  val compose_version = "1.3.3"
 //  val wear_compose_version = "1.1.2"
+
+
+  val composeBom = platform(libs.androidx.compose.bom)
+
+  implementation(composeBom)
+  androidTestImplementation(composeBom)
+  debugImplementation(composeBom)
+
 
 //  implementation("androidx.core:core-ktx:1.9.0")
   implementation(libs.androidx.core.ktx)
 //  implementation("com.google.android.gms:play-services-wearable:18.0.0")
   implementation(libs.play.services.wearable)
 
-  implementation("androidx.compose.ui:ui:$compose_version")
+  implementation("androidx.compose.ui:ui")
 //  implementation("androidx.wear.compose:compose-material:$wear_compose_version")
   implementation(libs.wear.compose.material)
 //  implementation("androidx.wear.compose:compose-foundation:$wear_compose_version")
   implementation(libs.wear.compose.foundation)
-  implementation("androidx.compose.ui:ui-tooling-preview:$compose_version")
+  implementation("androidx.compose.ui:ui-tooling-preview")
   implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
   implementation("androidx.activity:activity-compose:1.6.1")
-  androidTestImplementation("androidx.compose.ui:ui-test-junit4:$compose_version")
-  debugImplementation("androidx.compose.ui:ui-tooling:$compose_version")
-  debugImplementation("androidx.compose.ui:ui-test-manifest:$compose_version")
+  androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+  debugImplementation("androidx.compose.ui:ui-tooling")
+  debugImplementation("androidx.compose.ui:ui-test-manifest")
 //    wearApp project(":wear")
 
 
