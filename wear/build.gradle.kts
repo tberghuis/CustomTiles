@@ -36,10 +36,10 @@ android {
   buildFeatures {
     compose = true
   }
-  composeOptions {
-    kotlinCompilerExtensionVersion = "1.4.2"
-  }
-  packagingOptions {
+//  composeOptions {
+//    kotlinCompilerExtensionVersion = "1.4.2"
+//  }
+  packaging {
     resources {
       excludes += "/META-INF/{AL2.0,LGPL2.1}"
     }
@@ -64,17 +64,27 @@ dependencies {
 //  implementation("com.google.android.gms:play-services-wearable:18.0.0")
   implementation(libs.play.services.wearable)
 
-  implementation("androidx.compose.ui:ui")
+//  implementation("androidx.compose.ui:ui")
+  implementation(libs.androidx.compose.ui)
+
 //  implementation("androidx.wear.compose:compose-material:$wear_compose_version")
   implementation(libs.wear.compose.material)
 //  implementation("androidx.wear.compose:compose-foundation:$wear_compose_version")
   implementation(libs.wear.compose.foundation)
-  implementation("androidx.compose.ui:ui-tooling-preview")
-  implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
-  implementation("androidx.activity:activity-compose:1.6.1")
-  androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-  debugImplementation("androidx.compose.ui:ui-tooling")
-  debugImplementation("androidx.compose.ui:ui-test-manifest")
+//  implementation("androidx.compose.ui:ui-tooling-preview")
+  implementation(libs.androidx.compose.ui.tooling.preview)
+//  implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+  implementation(libs.androidx.lifecycle.runtime)
+//  implementation("androidx.activity:activity-compose:1.6.1")
+  implementation(libs.androidx.activity.compose)
+//  androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+  implementation(libs.androidx.compose.ui.test.junit4)
+//  debugImplementation("androidx.compose.ui:ui-tooling")
+  implementation(libs.androidx.compose.ui.tooling)
+//  debugImplementation("androidx.compose.ui:ui-test-manifest")
+  implementation(libs.androidx.compose.ui.test.manifest)
+
+
 //    wearApp project(":wear")
 
 
