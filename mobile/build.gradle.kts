@@ -11,7 +11,7 @@ android {
   defaultConfig {
     applicationId = "dev.tberghuis.customtiles"
     minSdk = 28
-    targetSdk = 33
+    targetSdk = 34
     versionCode = 3
     versionName = "1.2"
 
