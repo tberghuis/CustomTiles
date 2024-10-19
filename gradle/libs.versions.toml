@@ -1,5 +1,6 @@
 [versions]
 agp = "8.7.1"
+glance-wear-tiles = "1.0.0-alpha05"
 kotlin = "2.0.20"
 androidx-corektx = "1.9.0"
 play-services-wearable = "18.0.0"
@@ -10,6 +11,7 @@ androidx-activity-compose = "1.6.1"
 
 [libraries]
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-corektx" }
+androidx-glance-wear-tiles = { module = "androidx.glance:glance-wear-tiles", version.ref = "glance-wear-tiles" }
 play-services-wearable = { module = "com.google.android.gms:play-services-wearable", version.ref = "play-services-wearable" }
 wear-compose-foundation = { module = "androidx.wear.compose:compose-foundation", version.ref = "androidx-wear-compose" }
 wear-compose-material = { module = "androidx.wear.compose:compose-material", version.ref = "androidx-wear-compose" }

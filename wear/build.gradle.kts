@@ -90,7 +90,9 @@ dependencies {
 
 //    implementation "com.google.android.horologist:horologist-tiles:0.3.3"
 
-  implementation("androidx.glance:glance-wear-tiles:1.0.0-alpha05")
+  implementation(libs.androidx.glance.wear.tiles)
+
+
 //    implementation "androidx.glance:glance-appwidget:1.0.0-alpha05"
 
 //    implementation "com.google.accompanist:accompanist-pager:0.28.0"
