@@ -12,8 +12,8 @@ android {
     applicationId = "dev.tberghuis.customtiles"
     minSdk = 28
     targetSdk = 34
-    versionCode = 10006
-    versionName = "1.3.2"
+    versionCode = 10007
+    versionName = "1.3.3"
     vectorDrawables {
       useSupportLibrary = true
     }
