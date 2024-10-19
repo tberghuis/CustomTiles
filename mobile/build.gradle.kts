@@ -56,15 +56,21 @@ dependencies {
   androidTestImplementation(composeBom)
 
 
-    implementation("androidx.core:core-ktx:1.9.0")
-  implementation("com.google.android.gms:play-services-wearable:18.0.0")
+//    implementation("androidx.core:core-ktx:1.9.0")
+    implementation(libs.androidx.core.ktx)
+//  implementation("com.google.android.gms:play-services-wearable:18.0.0")
+  implementation(libs.play.services.wearable)
 
 
+//  implementation("androidx.compose.material3:material3")
+  implementation(libs.androidx.compose.material3)
+//  implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation(libs.androidx.compose.ui.tooling.preview)
+//  debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation(libs.androidx.compose.ui.tooling)
+//  androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
 
-  implementation("androidx.compose.material3:material3")
-  implementation("androidx.compose.ui:ui-tooling-preview")
-  debugImplementation("androidx.compose.ui:ui-tooling")
-  androidTestImplementation("androidx.compose.ui:ui-test-junit4")
   debugImplementation("androidx.compose.ui:ui-test-manifest")
 
   implementation("androidx.activity:activity-compose:1.6.1")

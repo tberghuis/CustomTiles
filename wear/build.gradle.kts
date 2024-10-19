@@ -78,11 +78,11 @@ dependencies {
 //  implementation("androidx.activity:activity-compose:1.6.1")
   implementation(libs.androidx.activity.compose)
 //  androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-  implementation(libs.androidx.compose.ui.test.junit4)
+  androidTestImplementation(libs.androidx.compose.ui.test.junit4)
 //  debugImplementation("androidx.compose.ui:ui-tooling")
-  implementation(libs.androidx.compose.ui.tooling)
+  debugImplementation(libs.androidx.compose.ui.tooling)
 //  debugImplementation("androidx.compose.ui:ui-test-manifest")
-  implementation(libs.androidx.compose.ui.test.manifest)
+  debugImplementation(libs.androidx.compose.ui.test.manifest)
 
 
 //    wearApp project(":wear")
