@@ -1,8 +1,6 @@
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.kotlin.android)
-//    id 'kotlin-kapt'
-//  id("kotlin-kapt")
 }
 
 android {
@@ -52,9 +50,13 @@ dependencies {
   val compose_version = "1.3.3"
   val wear_compose_version = "1.1.2"
 
-  implementation("androidx.core:core-ktx:1.9.0")
-  implementation("com.google.android.gms:play-services-wearable:18.0.0")
-  implementation("androidx.percentlayout:percentlayout:1.0.0")
+//  implementation("androidx.core:core-ktx:1.9.0")
+  implementation(libs.androidx.core.ktx)
+//  implementation("com.google.android.gms:play-services-wearable:18.0.0")
+  implementation(libs.play.services.wearable)
+
+  // i think this is needed for junit?
+  implementation(libs.androidx.percentlayout)
   implementation("androidx.legacy:legacy-support-v4:1.0.0")
   implementation("androidx.recyclerview:recyclerview:1.2.1")
   implementation("androidx.compose.ui:ui:$compose_version")

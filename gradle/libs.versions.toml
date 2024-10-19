@@ -1,9 +1,14 @@
 [versions]
 agp = "8.7.1"
 kotlin = "1.8.10"
+androidx-corektx = "1.9.0"
+percentlayout = "1.0.0"
+play-services-wearable = "18.0.0"
 
 [libraries]
-
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-corektx" }
+androidx-percentlayout = { module = "androidx.percentlayout:percentlayout", version.ref = "percentlayout" }
+play-services-wearable = { module = "com.google.android.gms:play-services-wearable", version.ref = "play-services-wearable" }
 
 
 [plugins]
