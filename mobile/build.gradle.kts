@@ -6,7 +6,7 @@ plugins {
 
 android {
   namespace = "dev.tberghuis.customtiles"
-  compileSdk = 33
+  compileSdk = 34
 
   defaultConfig {
     applicationId = "dev.tberghuis.customtiles"
@@ -37,10 +37,10 @@ android {
   buildFeatures {
     compose = true
   }
-  composeOptions {
-    kotlinCompilerExtensionVersion = "1.4.2"
-  }
-  packagingOptions {
+//  composeOptions {
+//    kotlinCompilerExtensionVersion = "1.4.2"
+//  }
+  packaging {
     resources {
       excludes += "/META-INF/{AL2.0,LGPL2.1}"
     }
@@ -48,13 +48,18 @@ android {
 }
 
 dependencies {
-  implementation("androidx.core:core-ktx:1.9.0")
+
+
+
+  val composeBom = platform(libs.androidx.compose.bom)
+  implementation(composeBom)
+  androidTestImplementation(composeBom)
+
+
+    implementation("androidx.core:core-ktx:1.9.0")
   implementation("com.google.android.gms:play-services-wearable:18.0.0")
 
 
-  val composeBom = platform("androidx.compose:compose-bom:2023.01.00")
-  implementation(composeBom)
-  androidTestImplementation(composeBom)
 
   implementation("androidx.compose.material3:material3")
   implementation("androidx.compose.ui:ui-tooling-preview")
