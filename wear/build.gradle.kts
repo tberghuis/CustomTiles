@@ -97,10 +97,10 @@ dependencies {
 
 //    implementation "com.google.accompanist:accompanist-pager:0.28.0"
 
-  implementation("androidx.datastore:datastore-preferences:1.0.0")
+//  implementation("androidx.datastore:datastore-preferences:1.0.0")
+  implementation(libs.androidx.dataStore.preferences)
 
-
-  implementation("com.google.guava:guava:31.0.1-android")
+  implementation(libs.guava)
 }
 
 //kapt {
