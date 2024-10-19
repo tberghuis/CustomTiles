@@ -55,8 +55,6 @@ dependencies {
 //  implementation("com.google.android.gms:play-services-wearable:18.0.0")
   implementation(libs.play.services.wearable)
 
-  // i think this is needed for junit?
-  implementation(libs.androidx.percentlayout)
   implementation("androidx.legacy:legacy-support-v4:1.0.0")
   implementation("androidx.recyclerview:recyclerview:1.2.1")
   implementation("androidx.compose.ui:ui:$compose_version")
