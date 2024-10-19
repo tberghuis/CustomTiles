@@ -56,7 +56,6 @@ fun HomeScreen(
   }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreenContent(
   paddingValues: PaddingValues, vm: HomeScreenViewModel = viewModel()
