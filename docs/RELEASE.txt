@@ -1,0 +1,12 @@
+play store console
+  current version 100% rollout
+
+docs/changelog.txt
+update version
+build apk aab
+merge branch master
+tag apk github
+upload internal test
+test
+wait pre-launch report
+promote production 99% rollout
